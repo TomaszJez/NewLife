@@ -1,0 +1,34 @@
+Babel is COMPILER
+Compiled language (C/C++, Java)
+Program Code => Compiler => Machine Code => Run //First compile then run
+Interpreted Language (JaxaScript, Python)
+Program Code => Interpreter (engine) => Machine Code => Run(thrugh all elements) //Run in real time uding interpreter
+Transpiler - translates code one language to another (Sass -> CSS, Python -> JavaScript)
+[JavaScript, Python, PHP] => [C/C++, Java] => [Assembly, Bytecode] => [Machine Code] its compiling
+ES5 2009 ES6 2015 created by ECMA there also ES7 and ES8 other (V8 - Node.js, SpiderMonkey - Mozilla, ActionScript)
+Babel transforms&compile ES6 => ES5. If brownser dont accept new features we get error. Server should first transver ES6+ to ES5.
+ECMA Script compatibility https://kangax.github.io/compat-table/es6/  https://caniuse.com/
+https://babeljs.io/ - CONVERSION OF CODE
+User Agent - Detection off brownser.  window.navigator.userAgent
+Brownser check is not reliable.
+Better is check future detection.
+------------------------------------------------------
+var userAgent = navigator.userAgent;
+if(userAgent.indexOf("Chrome") > -1){
+    console.log(`Hello from ES6`)
+} else {
+    console.log("Hello from ES5")
+}
+------------------------------------------------------
+function featureCheck() {
+    try {eval("`ES6+ Code`;");}
+    catch (e){return false;}
+    return true;
+}
+if (featureCheck()) {console.log("ES6 Template Literals are supported");} 
+else {console.log("Hello from ES5");}
+------------------------------------------------------
+Babel behaviour const babel = code => code;
+babel src/index.js --out-file src/babel.js  In comand line to translate.
+Babel have presets like "babel-preset-env" or stage presets when it comes to new features in ECMA standart.
+Presets need to be installed. npm install --saave-dev babel-preset-env. Directly in inventory.
