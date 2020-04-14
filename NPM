@@ -1,0 +1,39 @@
+Node Package Manager
+@babel/cli Package https://www.npmjs.com/package/@babel/cli
+Package.json if you want to distribute. JS Object Notation easy to convert between JS Objest <=> JSON.
+npm init -y / to create package.jason
+Semantic Versioning - Each public package have oen namw and version.
+5.21.17 = Major.Minor.Patch Exact version , Grather then >5.21.1 Compatibile CHanges ^5.21.4.
+1.0.0-alpha < 1.0.0-alpha.1
+npm install - install all packages listed in npm node_modules FOLDER in projecct folder
+npm install <package>
+npm install <package> --save-dev added as developement dependency
+moment package
+semver package
+Dependencies vs Developement Dependencies
+Dependencies when installation package A is processed and it has dependencie to B then additional package is installed.
+Developement Dependencies when installation package A is processed and it has dev dependencie to B then add package is NOT installed.
+npm uninstall browserslist
+npm install -D browserslist - Developement Dependencies
+If you delete npm folder is enough to "npm i" to install all last modules. Folder dont need to be commited to any system.
+Browser App - based on html file - brownser dont support  modules
+Server Pacage - dont have any htmml
+Dependencies vs Developement Dependencies have no relation to Browser App
+Dependencies vs Developement Dependencies it dosnt matter if I build for stand alone app and later bundle. One of two ways.
+Dependencies olny if package is public, compiled version of your package uses features from dependend packages, other pkg depend on your pkg.
+All other go as DeV Dependiences
+Most packages in world used only during dev of other packages
+Package information npm wiev <package> (versions) - optional for all.
+Package ver => npm install moment@2.12.0
+package-lock.json - keep tree ver of dependencies when delete node_modules and "npm install" on other computer.
+package-lock.json - should be always commited t osource / node_modules shouldnt be commited / is not published to NPM software registry
+Guarantees consistency of the dependencies versions / generated and updated automaticly
+npm update / ^1.2.5 => ^1.3.0 update to newest version if more that 1.2.5 is aviable
+npm update <package>
+NPM scripts:
+npm start / stop / prestart / postarts - presets scripts
+Custom NPM scripts npm run <script>
+NPM .BIN Folder
+Shebeng line #!/usr/bin/env node
+
+
