@@ -1,0 +1,51 @@
+
+MERN (MongoDB Express React Node.js)
+MEAN (MongoDB Express Angular Node.js)
+Data bases Relational DB Document DB
+MongoDB is Mongo Shell(management of mongo server/ mongo starts shell) and Mongo Server (mongod starts server)
+MongoDbAtlas
+
+JSON Java Script Object Notation - its string (six data type aviable String Number Object Array Boolean Null)
+Difference Json(string) vs JS Object(variable type). Conversion JSON.parse() JSON.stringify
+BSON Binary JSON - supports more data types
+Extended Json - Readable BSON format 
+BSON type  TypeID Extended Json representation
+String          2   Sample string
+Object          3   {}
+Boolean         8   true
+Array           4   [1, 3, 4]
+Double          1   10.4
+32-bit Integer  16  NumberInt(138)
+ObjectId        7   ObjectId("sdsfs")
+Date            9   ISO Date("2020-04-12")
+find({query})
+findOne({})
+Query Operators - $or $eq $and $ne $lt $gt $in $nin
+sort() sorting -1, 1 ascending odrer
+limit() limitation of documents on console
+skip() sciping number of documents
+updateOne()
+updateMany()
+(<query>,<update>,<options>)
+Update operators - $set $rename $unset $inc $curentDate $addToSet
+db.posts.updateOne(
+{postId: 1151}, 
+{$set: {title: "What is senior?"} })
+Delete methoda $deleteOne({query}) $deleteMany({query})
+db.getCollection('posts').deleteMany({title: {$exists: false}})
+Aggregation Framework - finding subset in documents and creating new nocuments from it.
+db.posts.aggregate([    {$group: {_id: "$author.nickname"}}])
+> db.posts.getIndexes()
+MongoDB utilities - seperate apps
+mongoexport
+mongoimport
+mongodump
+mongorestore
+Replica Sets
+Primary--> Secondary
+        --> Secondary
+        --> Secondary
+Changes on primary server. Changes are replicated to secondary server. If primary server fain one of secondary become primary.
+Write on primary and read from any.
+Robo 3t 
+MongoDB Drivers - drivers for programming language. php, node.js, C+, Java, Phyton
